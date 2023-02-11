@@ -5,7 +5,6 @@ N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
 
-
 int GetNaturalNumber(string message)
 {
   int result = 0;
@@ -14,16 +13,9 @@ int GetNaturalNumber(string message)
   {
     Console.Write(message);
 
-    if (int.TryParse(Console.ReadLine(), out result) && result > 0)
-    {
-      break;
-    }
-    else
-    {
-      Console.WriteLine("Ввели не число или некорректное число. Повторите ввод!");
-    }
+    if (int.TryParse(Console.ReadLine(), out result) && result > 0) break;
+    else Console.WriteLine("Ввели не число или некорректное число. Повторите ввод!");
   }
-
   return result;
 }
 
